@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Service</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="flex items-center justify-between py-4 mx-3">
+            <div class="flex items-center space-x-2">
+                <img src="./assets/logo.png" class="max-w-13" alt="national logo ">
+                <p class="text-[#006747] text-2xl font-extrabold">Emergency <br>Service</p>
+            </div>
+            <div class="flex items-center space-x-5">
+                <p class="flex items-center space-x-2 text-[16px] font-bold">
+                    <span id="count-heart">0</span>
+                    <i class="fa-solid fa-heart text-red-500 text-2xl "></i>
+                </p>
+                <p class="flex items-center  space-x-2 text-[16px] font-bold bg-[#c3f1cd] px-4 py-2 rounded-3xl">
+                    <span id="count-coin">100</span>
+                    <img class="max-w-6" src="./assets/coin.png" alt="coin">
+
+                </p>
+                <p
+                    class="px-4 py-2 flex items-center space-x-2 rounded-3xl bg-[#00A63E] text-white font-semibold text-[18px]">
+                    <span>0</span> <span>Copy</span>
+                </p>
+            </div>
+        </nav>
+
+        <div
+            class="min-h-72 flex  justify-center items-center   bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
+            <div class="flex flex-col justify-center items-center">
+                <img src="./assets/logo-dark.png" class="max-w-[120px] " alt="national logo">
+                <p class="text-[40px] text-white font-bold">Emergency Service Directory</p>
+                <p class="text-xl font-semibold text-white mt-3">Government Emergency Services at Your Fingertip – A
+                    Project by Government of the People’s Republic of
+                    Bangladesh</p>
+            </div>
+        </div>
+
+    </header>
+    <main class="bg-[#e9faed]">
+        <Section class="mx-10 pt-10 pb-16 flex justify-center space-x-4">
+            <div id="card-parent" class="grid grid-cols-3 gap-4  ">
+
+            </div>
+            <div class=" max-w-80 flex-1 rounded-xl bg-white  p-5">
+                <div class="flex justify-between items-center">
+                    <h1 class="flex text-[18px] font-medium items-center space-x-1 ">
+                        <i class="fa-regular fa-clock text-xl"></i>
+                        <span>Call History</span>
+                    </h1>
+                    <button class="btn rounded-3xl text-[18px] bg-[#00A63E] text-white ">Clear</button>
+                </div>
+
+            </div>
+        </Section>
+    </main>
+
+    <script src="javascript/card.js"></script>
+    <script src="javascript/functionalUtilites.js"></script>
+
 </body>
+
 </html>
