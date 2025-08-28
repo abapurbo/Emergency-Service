@@ -15,9 +15,9 @@ const serviceCard = document.getElementById('card-parent');
 cards.forEach((card, index) => {
     const div = document.createElement('div');
     div.innerHTML = ` 
-     <div class="bg-white shadow-lg w-[270px] h-[290px] rounded-xl p-4 ">
-                    <div class="h-full flex flex-col">
-                        <div class="">
+     <div class="bg-white shadow-lg min-w-[270px] min-h-[290px] rounded-xl p-4 ">
+                    <div class=" h-full flex flex-col">
+                        <div>
                             <p class="flex justify-between items-center mb-3">
                                 <img class="${card.serviceCategory == 'Police' ? 'w-12  rounded-xl p-3 bg-[#DFEFFF]' : 'w-12  rounded-xl p-3 bg-[#FFE3E2]'}  " src=${card?.serviceImg}
                                     alt="emergency image">
@@ -26,13 +26,13 @@ cards.forEach((card, index) => {
                             <h1 class="text-[17px] font-bold">${card?.numberCategory}</h1>
                             <h3 id="service-name-${index + 1}" class="text-[15px] text-[#5C5C5C]">${card?.serviceName}</h3>
                         </div>
-                        <div class="flex-auto  mt-3">
+                        <div class="flex-1  mt-3">
 
                             <h1 id="service-number-${index + 1}" class="text-2xl font-bold mb-2">${card?.number}</h1>
                             <p class="px-4 py-1 text-[16px] text-gray-600 rounded-3xl bg-gray-200 w-fit">${card?.serviceCategory}</p>
                         </div>
 
-                        <div class="flex items-center space-x-2 ">
+                        <div class="flex mt-4 items-center space-x-2 ">
                             <button onclick="copyButton('service-number-${index + 1}')" class="btn flex-1 btn-outline text-[16px] border-gray-400"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
                             <button onclick="serviceCallButton('service-number-${index + 1}','service-name-${index + 1}')" class="bg-[#00A63E] flex-1 text-white btn"> <i

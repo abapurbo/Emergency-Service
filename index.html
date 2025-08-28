@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Service</title>
     <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -14,55 +15,62 @@
 
 <body>
     <header>
-        <nav class="flex items-center justify-between py-4 mx-3">
+        <nav class="flex  items-center justify-between py-4 mx-3">
             <div class="flex items-center space-x-2">
-                <img src="./assets/logo.png" class="max-w-13" alt="national logo ">
-                <p class="text-[#006747] text-2xl font-extrabold">Emergency <br>Service</p>
+                <img src="./assets/logo.png" class="lg:max-w-13 max-w-9" alt="national logo ">
+                <p class="text-[#006747] lg:text-2xl text-[14px] font-extrabold">Emergency <br>Service</p>
             </div>
-            <div class="flex items-center space-x-5">
-                <p class="flex items-center space-x-2 text-[16px] font-bold">
-                    <span id="count-heart">0</span>
+            <div class="flex items-center lg:space-x-5">
+                <p class="flex relative items-center space-x-2 text-[16px] font-bold">
+                    <span id="count-heart" class="lg:relative lg:bottom-0 lg:left-0 absolute bottom-4 left-6">0</span>
                     <i class="fa-solid fa-heart text-red-500 text-2xl "></i>
                 </p>
-                <p class="flex items-center  space-x-2 text-[16px] font-bold bg-[#c3f1cd] px-4 py-2 rounded-3xl">
-                    <span id="service-coin">100</span>
+                <p class="flex relative items-center  space-x-2 text-[16px] font-bold lg:bg-[#c3f1cd] px-4 py-2 rounded-3xl">
+                    <span id="service-coin" class="lg:relative lg:bottom-0 lg:left-0  absolute  bottom-6 left-7">100</span>
                     <img class="max-w-6" src="./assets/coin.png" alt="coin">
 
                 </p>
+                
                 <p
-                    class="px-4 py-2 flex items-center space-x-2 rounded-3xl bg-[#00A63E] text-white font-semibold text-[18px]">
-                    <span id="count-copy">0</span> <span>Copy</span>
+                    class="lg:px-4  lg:py-2 flex relative items-center space-x-2 rounded-3xl lg:bg-[#00A63E] lg:text-white font-semibold lg:text-[18px] text-xl">
+                    <span id="count-copy" class="lg:relative lg:bottom-0 lg:left-0 absolute bottom-[14px] left-4 ">0</span> <span class="lg:block hidden">Copy</span>
+                   <i id="copy-icon" class="fa-solid fa-copy "></i>
                 </p>
+                
             </div>
+            
         </nav>
-
+        <!-- banner section -->
+         
         <div
-            class="min-h-72 flex  justify-center items-center   bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
+            class="min-h-72  flex px-2 justify-center items-center   bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
             <div class="flex flex-col justify-center items-center">
                 <img src="./assets/logo-dark.png" class="max-w-[120px] " alt="national logo">
-                <p class="text-[40px] text-white font-bold">Emergency Service Directory</p>
-                <p class="text-xl font-semibold text-white mt-3">Government Emergency Services at Your Fingertip – A
+                <p class="lg:text-[40px] text-2xl text-white font-bold">Emergency Service Directory</p>
+                <p class="lg:text-xl text-[14px] text-center font-semibold text-white mt-3">Government Emergency Services at Your Fingertip – A
                     Project by Government of the People’s Republic of
                     Bangladesh</p>
             </div>
         </div>
 
     </header>
-    <main class="bg-[#e9faed]">
-        <Section class="mx-10 pt-10 pb-16 flex justify-center space-x-4">
-            <div id="card-parent" class="grid grid-cols-3 gap-4  ">
+    <!-- card section -->
+    <main class="bg-[#e9faed] ">
+        <Section class="mx-10 pt-10 pb-16 flex flex-col  lg:flex-row justify-center lg:space-x-4 space-y-4">
+            <div id="card-parent" class="grid lg:grid-cols-3 grid-col-1 gap-4  ">
 
             </div>
-            <div class=" max-w-80 flex-1 rounded-xl bg-white  p-5">
+            <div class="lg:max-w-80 min-w-[300px] flex-1 rounded-xl bg-white  p-5">
                 <div class="flex justify-between items-center">
                     <h1 class="flex text-[18px] font-medium items-center space-x-1 ">
                         <i class="fa-regular fa-clock text-xl"></i>
                         <span>Call History</span>
                     </h1>
-                    <button id="clear-history" class="btn rounded-3xl text-[18px] bg-[#00A63E] text-white ">Clear</button>
+                    <button id="clear-history"
+                        class="btn rounded-3xl text-[18px] bg-[#00A63E] text-white ">Clear</button>
                 </div>
                 <div id="call-history" class="mt-3 space-y-3">
-                    
+
                 </div>
 
             </div>
@@ -71,7 +79,7 @@
 
     <script src="javascript/card.js"></script>
     <script src="javascript/functionalUtilites.js"></script>
-  
+
 </body>
 
 </html>

@@ -1,0 +1,9 @@
+#copy-icon{
+    display: none !important;
+}
+
+@media screen and (max-width:576px) {
+    #copy-icon{
+        display: block !important;
+    }
+}
