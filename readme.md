@@ -98,4 +98,16 @@ document.getElementById('myLink').addEventListener('click', (e) => {
     e.stopPropagation()    
 })
 
+```
+---
+
+## ⚙️ Technology Stack
+---
+
+ - HTML
+ - JavaScript
+ - CSS
+ - Tailwind
+ - DaisyUI 
+
 
