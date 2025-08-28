@@ -24,16 +24,17 @@ This is README explains key JavaScript concepts related to DOM manipulation and 
 ----
 
 ## 2.How to create and insert a new element into the DOM  
-    
-   // 1. Create element
-   const newDiv=document.createElement("div");
-   
-   // 2. Add content / Attributes
-   newDiv.textContent='Hello world"
-   newDiv.id='my-div';
 
-   // 3.Select parent element
-   const parent=document.getElementById('container');
+```javascript
+// 1. Create element
+const newDiv = document.createElement('div');
 
-   // 4.Insert into DOM
-    Parent.appendChild(newDiv)
+// 2. Add content / attributes
+newDiv.textContent = 'Hello World!';
+newDiv.className = 'my-div';
+
+// 3. Select parent element
+const parent = document.getElementById('container');
+
+// 4. Insert into DOM
+parent.appendChild(newDiv);
