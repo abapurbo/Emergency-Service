@@ -31,9 +31,9 @@ const serviceCallButton = (numberId, serviceNameId) => {
             historyDiv.innerHTML = `<div class="bg-gray-100 p-2 rounded-sm flex justify-between items-center ">
                         <div>
                             <h1 class="font-bold text-[16px] w-46">${call?.serviceName}</h1>
-                            <h2 class="text-[14px]">${call?.serviceNumber}</h2>
+                            <h2 class="text-[14px] inter-font">${call?.serviceNumber}</h2>
                         </div>
-                        <p class="lg:text-[14px] text-[10px]">${call?.time}</p>
+                        <p class="lg:text-[14px] text-[10px] inter-font ">${call?.time}</p>
                     </div>`
             callHistory.appendChild(historyDiv)
         }
